@@ -380,11 +380,11 @@ sudo systemctl restart foobar
         
         ![](lvdisplay.png)
 
-    * 缩减容量：`sudo lvreduce -L -1G /dev/cuc-vg/root`
-        * `cuc`是当前用户名
+    * 缩减容量：`sudo lvreduce -L -1G /dev/ubuntu-vg/root`
+        * `ubuntu`是主机名
         * `-1G`表示容量缩减1G
 
-    * 动态扩容：`sudo lvextend -L +1G /dev/cuc-vg/root`
+    * 动态扩容：`sudo lvextend -L +1G /dev/ubuntu-vg/root`
 
         ![](lv.png)
 
