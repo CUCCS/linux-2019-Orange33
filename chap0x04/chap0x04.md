@@ -55,7 +55,7 @@
     bash player.sh -ar -p -ac -n
 
     # weblog.sh: -o可替换为-i/-u/-s/-u4/-uh <URL>，详见代码
-    bash weblog.sh -o >>output.log
+    bash weblog.sh -o
     ```
 
 ## 实验问题
