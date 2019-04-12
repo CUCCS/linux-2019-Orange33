@@ -134,10 +134,10 @@ if [[ "$#" -eq 0 ]]; then
 fi
 while [[ "$#" -ne 0 ]]; do
 	case "$1" in
-		"-ar")AgeRange "worldcupplayerinfo.tsv"; shift;;
-		"-ac")AgeCompare "worldcupplayerinfo.tsv"; shift;;
-		"-p")Position "worldcupplayerinfo.tsv"; shift;;
-		"-n")Name "worldcupplayerinfo.tsv"; shift;;
+		"-ar")AgeRange "chap0x04/worldcupplayerinfo.tsv"; shift;;
+		"-ac")AgeCompare "chap0x04/worldcupplayerinfo.tsv"; shift;;
+		"-p")Position "chap0x04/worldcupplayerinfo.tsv"; shift;;
+		"-n")Name "chap0x04/worldcupplayerinfo.tsv"; shift;;
 		"-h" | "--help")HelpInfo; exit 0
 	esac
 done	
