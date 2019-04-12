@@ -9,12 +9,25 @@ before_install:
     - tar --xz -xvf shellcheck-"${scversion}".linux.x86_64.tar.xz
     - sudo cp shellcheck-"${scversion}"/shellcheck /usr/bin/
     - /usr/bin/shellcheck --version
+    - sudo apt install p7zip-full
     
 script:
   - bash test.sh
+  - bash chap0x04/image.sh -h
+  - bash chap0x04/image.sh -i chap0x04/images/ -q 50% -r 90 -w cuc -p prefix -s suffix -c
+  - bash chap0x04/player.sh -h
+  - bash chap0x04/player.sh -ar -p -ac -n
+  - bash chap0x04/weblog.sh -h
+  - bash chap0x04/weblog.sh -o
+  - bash chap0x04/weblog.sh -i
+  - bash chap0x04/weblog.sh -u
+  - bash chap0x04/weblog.sh -s
+  - bash chap0x04/weblog.sh -u4
+  - bash chap0x04/weblog.sh -uh /images/NASA-logosmall.gif
 
 after_script:
   - /usr/bin/shellcheck test.sh
+  - /usr/bin/shellcheck chap0x04/*.sh
   
 after_failure:
   - id
