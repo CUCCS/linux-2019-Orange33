@@ -12,6 +12,7 @@ before_install:
     - sudo apt install p7zip-full
 
 script:
+  - bash test.sh
   - bash chap0x04/image.sh -h
   - bash chap0x04/image.sh -i chap0x04/images/ -q 50% -r 90 -w cuc -p prefix -s suffix -c
   - bash chap0x04/player.sh -h
@@ -25,6 +26,7 @@ script:
   - bash chap0x04/weblog.sh -uh /images/NASA-logosmall.gif
 
 after_script:
+  - /usr/bin/shellcheck test.sh
   - /usr/bin/shellcheck chap0x04/*.sh
 
 after_failure:
