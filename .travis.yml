@@ -10,6 +10,9 @@ before_install:
     - sudo cp shellcheck-"${scversion}"/shellcheck /usr/bin/
     - /usr/bin/shellcheck --version
     - sudo apt install p7zip-full
+    - sudo apt install imagemagick
+    - wget wget http://sec.cuc.edu.cn/huangwei/course/LinuxSysAdmin/exp/chap0x04/web_log.tsv.7z
+    - 7z x web_log.tsv.7z
     
 script:
   - bash test.sh
