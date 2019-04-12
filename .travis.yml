@@ -11,10 +11,14 @@ before_install:
     - /usr/bin/shellcheck --version
 
 script:
-  - bash test.sh
+  - bash chap0x04/image.sh -i chap0x04/images/ -q 50% -r 90 -w cuc -p prefix -s suffix -c
+  - bash chap0x04/player.sh -ar -p -ac -n
+  - bash chap0x04/weblog.sh -o >>output.log
 
 after_script:
-  - /usr/bin/shellcheck test.sh
+  - /usr/bin/shellcheck chap0x04/image.sh
+  - /usr/bin/shellcheck chap0x04/player.sh
+  - /usr/bin/shellcheck chap0x04/weblog.sh
 
 after_failure:
   - id
