@@ -3,8 +3,6 @@ set -o pipefail
 
 LANG=en_US.UTF-8
 
-wget wget http://sec.cuc.edu.cn/huangwei/course/LinuxSysAdmin/exp/chap0x04/web_log.tsv.7z
-7z x web_log.tsv.7z
 # host	logname	time	method	url	response	bytes	referer	useragent
 
 function HelpInfo {
