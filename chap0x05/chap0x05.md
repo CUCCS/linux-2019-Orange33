@@ -76,11 +76,12 @@
         * VeryNginx把控制面板上所做的配置保存在`/opt/verynginx/verynginx/configs/config.json`中。
 
     * wordpress 4.7
+    
         * 安装：
             * [How To Install Linux, Nginx, MySQL, PHP (LEMP stack) on Ubuntu 18.04 ](https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-ubuntu-18-04)
             * [How To Install WordPress with LEMP on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lemp-on-ubuntu-18-04)
             * [How To Create a Self-Signed SSL Certificate for Nginx in Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-18-04)
-
+            
             ```bash
             # 安装过程中注意：
 
@@ -93,12 +94,13 @@
         * 配置文件：`/etc/nginx/sites-available/wp-conf`
 
 
-        安装成功。
-
-        ![](img/wp_begin.png)
+        * 安装成功。
+            
+            ![](img/wp_begin.png)
 
     * dvwa
         * [安装](https://github.com/ethicalhack3r/DVWA)：
+        
             ```bash
             # 进入临时目录
             cd /tmp
@@ -151,11 +153,11 @@
             # 重启nginx
             sudo systemctl restart nginx
             ```
-    * 安装成功
+      * 安装成功
 
-        ![](img/dvwa_begin.png)
+         ![](img/dvwa_begin.png)
 
-    * 登录用户名：`admin`，密码：`password`
+      * 登录用户名：`admin`，密码：`password`
 
 * 以域名访问时注意先修改client虚拟机的`/etc/hosts`文件（win10中hosts文件在`C:\Windows\System32\drivers\etc`路径下），写入
     ```
@@ -358,6 +360,7 @@
 3. IP访问修改为域名访问
     * wordpress会将第一次访问的IP存入数据库
     * 解决：
+    
         ```bash
         # 启动mysql
         sudo mysql
